@@ -27,5 +27,6 @@ jobs:
 
       - name: Run markdown lint
         run: |
+          cd $GITHUB_WORKSPACE
           npm install remark remark-cli remark-preset-lint-consistent
-          remark . --use remark-preset-lint-consistent --frail
+          npm remark . --use remark-preset-lint-consistent --frail
